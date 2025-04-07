@@ -22,10 +22,10 @@
     "productName": "ElectronVue",
     "copyright": "Copyright © 2025 ${author}",
     "linux": {
-        "target": [
-            "snap",
-            "AppImage"
-        ]
+      "target": [
+        "snap",
+        "AppImage"
+      ]
     },
     "directories": {
       "buildResources": "assets",

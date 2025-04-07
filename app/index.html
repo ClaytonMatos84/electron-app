@@ -6,13 +6,38 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electron App</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>Timer</title>
 </head>
 
 <body>
-    <h1>Electron App</h1>
+    <div class="timer">
+        <h1>Timer</h1>
 
-    <p id="info"></p>
+        <div class="timer__container">
+            <div id="timer__container__numbers">
+                <input type="number" id="hours" class="timer__container__numbers--input" value="00" max="23" min="0">
+                <span>:</span>
+                <input type="number" id="minutes" class="timer__container__numbers--input" value="00" min="0" max="59">
+                <span>:</span>
+                <input type="number" id="seconds" class="timer__container__numbers--input" value="00" min="0" max="59">
+            </div>
+            <div class="timer__container__buttons">
+                <button id="start"
+                    onclick="onClickStart()">
+                    Iniciar
+                </button>
+                <button id="pause"
+                    onclick="onClickPause()">
+                    Pausar
+                </button>
+                <button id="reset"
+                    onclick="onClickReset()">
+                    Limpar
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="./public/js/renderer.js"></script>
 </body>
