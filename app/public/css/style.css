@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 .timer {
@@ -9,8 +10,12 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    margin-top: 32px;
-    font-family: 'Arial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.877);
+
+    > h1 {
+        margin: 32px 0 22px;
+        color: #f8f8f8;
+    }
 }
 
 .timer__container {
@@ -18,5 +23,48 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.timer__container__numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 22px;
+
+    > span {
+        color: rgb(45, 45, 255);
+        margin: 0 4px;
+    }
+}
+
+.timer__container__numbers--input {
+    padding: 15px 5px 15px 20px;
+    margin: 10px 0;
+    border-radius: 12px;
+    font-size: 25px;
+    border: 2px solid rgb(45, 45, 255);
+    color: rgba(2, 2, 134, 0.719);
+}
+
+.timer__container__buttons {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+
+    > button {
+        padding: 10px 20px;
+        border-radius: 12px;
+        font-size: 25px;
+        color: rgba(2, 2, 134, 0.719);
+        background-color: rgba(255, 255, 12, 0.9);
+        border: 2px solid rgba(45, 2, 112, 0.692);
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(255, 255, 224, 0.418);
+            color: black;
+        }
+    }
 }
